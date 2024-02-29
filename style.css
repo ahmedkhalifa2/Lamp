@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    display: flex;
+    min-height: 100vh ;
+    justify-content: center;
+    align-items: center;
+}
+body.on{
+    background: radial-gradient(#5d5c5c,#0f0f0f);
+}
+.lamp{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #444;
+    position: relative;
+    
+}
+.on .lamp{
+    background-color: #fff;
+}
+.on .lamp::before{
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: #fff;
+    top:50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    filter: blur(44px);
+}
+.lamp::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 40px;
+    background-color: #444;
+    bottom:30px;
+    left: 17px;
+    border-top: 15px solid black;
+    border-radius: 5px;
+}
+.on .lamp::after{
+    background-color: #fff;
+}
+.lamp span{
+    position: absolute;
+    width: 2px;
+    height: 50vh;
+    background-color: #c7c4c4;
+    bottom:50px;
+    left: 24px; 
+}
+.buttunn{
+    position: relative;
+    width: 64px;
+    height: 64px;
+    left: 44vw;
+    top: 33vh;
+    background-color: rgb(236, 245, 245);
+    border-radius: 8px;
+    border: 2px solid #000;
+}
+.buttunn span{
+    width: 32px;
+    height: 42px;
+    background:linear-gradient(#777,#fff,#777);
+    position: absolute;
+    left: 14px;
+    top: 9px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.buttunn span::after{
+    content: "";
+    width: 100%;
+    height: 85%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+.on .buttunn span::after{
+    top:15%;
+}
